@@ -1,0 +1,121 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f6f6;
+}
+
+header {
+    background-color: #ffc0cb;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 36px;
+    color: #ff69b4;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.photo-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.photo-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.photo-item:hover img {
+    opacity: 0.7;
+}
+
+.photo-item:hover {
+    transform: scale(1.05);
+}
+
+.photo-description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 10px;
+    border-radius: 0 0 15px 15px;
+    font-size: 14px;
+    color: #333;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.photo-item:hover .photo-description {
+    opacity: 1;
+}
+/* Existing styles */
+
+.memory-game {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.memory-game h2 {
+    font-size: 24px;
+    color: #ff69b4;
+    margin-bottom: 10px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.card {
+    width: 100px;
+    height: 150px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    text-align: center;
+    font-size: 18px;
+    transition: transform 0.3s;
+}
+
+.card.flipped {
+    background-color: #ff69b4;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.start-button {
+    margin-top: 20px;
+    background-color: #ff69b4;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.start-button:hover {
+    background-color: #ff4181;
+}
